@@ -2,7 +2,9 @@ import React, { Fragment, useEffect, useState } from "react";
 // import Overview from "./lead-overview-component";
 import { Home, Activity, Users, Columns, BookOpen, Book } from "react-feather";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
+import Email from "./Email/email-landing";
 import Landing from "./Landing/Landing";
+import SMS from "./SMS/sms-landing";
 // import Timeline from "./lead-timeline-component";
 // import OpenActivities from "./lead-activity-component";
 
@@ -40,11 +42,11 @@ const Marketing = ({ info, history }) => {
                 <Landing props={history} />{" "}
               </TabPanel>
               <TabPanel>
-                SMS
+                <SMS/>
                 {/* <Timeline /> */}
               </TabPanel>
               <TabPanel>
-                Email
+                <Email/>
                 {/* <OpenActivities /> */}
               </TabPanel>
             </div>

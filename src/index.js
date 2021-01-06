@@ -177,6 +177,7 @@ import AllTemplates from "./components/dashboard/Marketing/Landing/AllTemplates"
 import EditorComponent from "./components/dashboard/Marketing/Editor";
 import CreateLead from "./components/dashboard/leads/create-lead/create-lead";
 import PageDetails from "./components/dashboard/Marketing/PageDetails/PageDetails";
+import EmailSettings from './components/dashboard/Marketing/Email/email-settings';
 
 //un-comment this auth by using firebase only
 // import app from './data/base';
@@ -331,6 +332,10 @@ function Root() {
                 <Route
                   path={`${process.env.PUBLIC_URL}/dashboard/project`}
                   component={Project}
+                />
+                <Route
+                  path={`${process.env.PUBLIC_URL}/dashboard/emailSetting`}
+                  component={EmailSettings}
                 />
                 <Route
                   path={`${process.env.PUBLIC_URL}/review-quote/share`}
