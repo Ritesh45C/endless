@@ -4,7 +4,7 @@ import '../../../../assets/css/custom-form.css'
 import {Field, Form, Formik} from "formik";
 import CountUp from 'react-countup';
 
-const SendSetting =()=> {
+const SmsSchedule =()=> {
     return (
         <Fragment>
             <div className="container">
@@ -114,4 +114,4 @@ const SendSetting =()=> {
     )
 }
 
-export default SendSetting
+export default SmsSchedule

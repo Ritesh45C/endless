@@ -2,7 +2,7 @@ import React,{Fragment} from 'react'
 import '../../../../assets/css/custom-form.css'
 import {Field, Form, Formik} from "formik";
 
-const Settings = (props) => {
+const SmsSendSetting = (props) => {
     return (
         <Fragment>
             <div className="container">
@@ -51,7 +51,7 @@ const Settings = (props) => {
                                         </div>
                                         <div className="col-md-1">
                                         <button
-                                            className="btn btn-lg btn-primary"
+                                            className="btn  btn-primary"
                                             type="link"
                                             onClick={() => props.history.push("/dashboard/editor")}
                                         >
@@ -71,7 +71,7 @@ const Settings = (props) => {
                                         </div>
                                         <div className="col-md-1">
                                         <button
-                                            className="btn btn-lg btn-primary"
+                                            className="btn  btn-primary"
                                             type="link"
                                             onClick={() => props.history.push("/dashboard/editor")}
                                         >
@@ -128,4 +128,4 @@ const Settings = (props) => {
     )
 }
 
-export default Settings
+export default SmsSendSetting
