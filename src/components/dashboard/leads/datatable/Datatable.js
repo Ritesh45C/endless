@@ -11,7 +11,9 @@ const Datatable = ({ data }) => {
   const pageSize = 20;
   const Headers = [
     {
-      Header: "",
+      Header: (row) => {
+        return <input type="checkbox" style={{ marginLeft: 0 }} />;
+      },
       accessor: "",
       Cell: (row) => {
         return <input type="checkbox" style={{ marginLeft: 3 }} />;
