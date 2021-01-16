@@ -28,7 +28,7 @@ const FilterTable = ({ data, channel }) => {
   return (
     <Fragment>
       <div className="row">
-        <div className="col-xl-2">
+        <div className="col-xl-2" style={{padding : "0px"}}>
           <div className="col-xl-12">
             <div className="card">
               <Collapse isOpen={isFilter}>
@@ -52,7 +52,6 @@ const FilterTable = ({ data, channel }) => {
                           value={Q}
                           onChange={(e) => setQ(e.target.value)}
                         />
-                        <Search className="search-icon" />
                       </div>
                     </div>
                     <div className="checkbox-animated">
@@ -86,7 +85,7 @@ const FilterTable = ({ data, channel }) => {
             </div>
           </div>
         </div>
-        <div className="col-xl-10">
+        <div className="col-xl-10" style={{padding : "0px"}}>
           <div className="card ">
             <Datatable data={search(data)} />
           </div>

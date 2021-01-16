@@ -20,6 +20,7 @@ import {
   Button,
 } from "reactstrap";
 import { Grid, List } from "react-feather";
+import { useHistory } from "react-router-dom";
 
 import Photo from "../../../../assets/images/user/3.png";
 
@@ -38,6 +39,7 @@ const AllTemplates = (props) => {
     setgridView(false);
   };
 
+  const history = useHistory();
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle} centered={true}>
@@ -59,7 +61,7 @@ const AllTemplates = (props) => {
         </ModalBody>
         <ModalFooter>
           <Button
-            onClick={() => props.history.push("/dashboard/editor")}
+            onClick={() => history.push("/dashboard/editor")}
             color="primary"
           >
             Create Page

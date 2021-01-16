@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react';
 import { Link, withRouter } from "react-router-dom";
-import data from "../../../../data/dummyTableData";
-import Datatable from "../../../common/datatable";
+import data from '../../../../data/dummyTableData'
 
-const Landing = (props) => {
-  return (
-    <div>
-      <div className="customBtnLeft">
+const SMS = (props)=> {
+    return (
+        <div>
+          <div className="customBtnLeft">
         <button
           className="btn btn-lg btn-primary"
           type="link"
-          onClick={() => props.history.push("/dashboard/all-templates")}
+          onClick={() => props.history.push("/dashboard/smsSetting")}
         >
           Create
         </button>
@@ -18,7 +17,7 @@ const Landing = (props) => {
       <div className="col-sm-12">
         <div className="card">
           <div className="card-header">
-            <h5>All Pages</h5>
+            <h5>ALL SMS</h5>
           </div>
           <div className="table-responsive">
             <table className="table card-table table-vcenter text-nowrap">
@@ -86,44 +85,17 @@ const Landing = (props) => {
                     </td>
                     <td>{items.creat_on}</td>
 
-                    {/* <td className="text-right">
-                      <button
-                        className="btn btn-primary btn-sm"
-                        href="javascript"
-                      >
-                        <i className="fa fa-pencil"></i> {Edit}
-                      </button>
-                      <button
-                        className="btn btn-transparent btn-sm"
-                        href="javascript"
-                      >
-                        <i className="fa fa-link"></i> {Update}
-                      </button>
-                      <button
-                        className="btn btn-danger btn-sm"
-                        href="javascript"
-                      >
-                        <i className="fa fa-trash"></i> {Delete}
-                      </button>
-                    </td> */}
+                    
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          {/* <div className="card-body datatable-react">
-            <Datatable
-              multiSelectOption={false}
-              myData={data}
-              pageSize={6}
-              pagination={false}
-              class="-striped -highlight"
-            />
-          </div> */}
         </div>
       </div>
-    </div>
-  );
-};
+ 
+        </div>
+    )
+}
 
-export default withRouter(Landing);
+export default withRouter(SMS)
