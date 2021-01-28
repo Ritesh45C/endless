@@ -39,7 +39,7 @@ const BudgetComponent = () => {
                             <div className="card">
 
                                 <div className="card-body">
-                                    <StepZilla steps={steps} showSteps={true} showNavigation={true}
+                                    <StepZilla steps={steps} showSteps={false} showNavigation={true}
                                                stepsNavigation={true}
                                                backButtonCls="btn btn-next btn-default btn-lg pull-left"
                                                prevBtnOnLastStep={true}

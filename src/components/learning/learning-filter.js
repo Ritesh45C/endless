@@ -8,7 +8,7 @@ const LearningFilter = () => {
     const [isDevelopment, setIsDevelopment] = useState(true);
     return (
         <Fragment>
-            <div className="col-xl-3 xl-40">
+            <div className="col-xl-12 xl-40">
                 <div className="default-according style-1 faq-accordion job-accordion" id="accordionoc">
                     <div className="row">
                         <div className="col-xl-12">
@@ -16,7 +16,7 @@ const LearningFilter = () => {
                                 <div className="card-header">
                                     <h5 className="mb-0">
                                         <button className="btn btn-link pl-0" data-toggle="collapse" onClick={() => setIsFilter(!isFilter)}
-                                            data-target="#collapseicon" aria-expanded={isFilter} aria-controls="collapseicon">Find Course</button>
+                                            data-target="#collapseicon" aria-expanded={isFilter} aria-controls="collapseicon">SEARCH | ADD FILTERS</button>
                                     </h5>
                                 </div>
                                 <Collapse isOpen={isFilter}>
@@ -28,7 +28,9 @@ const LearningFilter = () => {
                                                     <Search className="search-icon"/>
                                                 </div>
                                             </div>
-                                            <div className="checkbox-animated">
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                <div className="checkbox-animated mt-0">
                                                 <div className="learning-header"><span className="f-w-600">Categories</span></div>
                                                 <label className="d-block" htmlFor="chk-ani">
                                                     <input className="checkbox_animated" id="chk-ani" type="checkbox" />
@@ -47,37 +49,9 @@ const LearningFilter = () => {
                                                     Management
                                                 </label>
                                             </div>
-                                            <div className="checkbox-animated mt-0">
-                                                <div className="learning-header"><span className="f-w-600">Duration</span></div>
-                                                <label className="d-block" htmlFor="chk-ani6">
-                                                    <input className="checkbox_animated" id="chk-ani6" type="checkbox" />
-                                                    0-50 hours
-                                                </label>
-                                                <label className="d-block" htmlFor="chk-ani7">
-                                                    <input className="checkbox_animated" id="chk-ani7" type="checkbox" />
-                                                    50-100 hours
-                                                </label>
-                                                <label className="d-block" htmlFor="chk-ani8">
-                                                    <input className="checkbox_animated" id="chk-ani8" type="checkbox" />
-                                                    100+ hours
-                                                </label>
-                                            </div>
-                                            <div className="checkbox-animated mt-0">
-                                                <div className="learning-header"><span className="f-w-600">Price</span></div>
-                                                <label className="d-block" htmlFor="edo-ani">
-                                                    <input className="radio_animated" id="edo-ani" type="radio" name="rdo-ani" defaultChecked="" />
-                                                    All Courses
-                                                </label>
-                                                <label className="d-block" htmlFor="edo-ani1">
-                                                    <input className="radio_animated" id="edo-ani1" type="radio" name="rdo-ani" defaultChecked="" />
-                                                    Paid Courses
-                                                    </label>
-                                                <label className="d-block" htmlFor="edo-ani2">
-                                                    <input className="radio_animated" id="edo-ani2" type="radio" name="rdo-ani" defaultChecked="" />
-                                                    Free Courses
-                                                </label>
-                                            </div>
-                                            <div className="checkbox-animated mt-0">
+                                                </div>
+                                                <div className="col-md-6">
+                                                <div className="checkbox-animated mt-0">
                                                 <div className="learning-header"><span className="f-w-600">Status</span></div>
                                                 <label className="d-block" htmlFor="chk-ani3">
                                                     <input className="checkbox_animated" id="chk-ani3" type="checkbox" />
@@ -92,13 +66,47 @@ const LearningFilter = () => {
                                                     Completed
                                                     </label>
                                             </div>
+                                                </div>
+                                            </div>
+                                            
+                                            {/* <div className="checkbox-animated mt-0">
+                                                <div className="learning-header"><span className="f-w-600">Duration</span></div>
+                                                <label className="d-block" htmlFor="chk-ani6">
+                                                    <input className="checkbox_animated" id="chk-ani6" type="checkbox" />
+                                                    0-50 hours
+                                                </label>
+                                                <label className="d-block" htmlFor="chk-ani7">
+                                                    <input className="checkbox_animated" id="chk-ani7" type="checkbox" />
+                                                    50-100 hours
+                                                </label>
+                                                <label className="d-block" htmlFor="chk-ani8">
+                                                    <input className="checkbox_animated" id="chk-ani8" type="checkbox" />
+                                                    100+ hours
+                                                </label>
+                                            </div> */}
+                                            {/* <div className="checkbox-animated mt-0">
+                                                <div className="learning-header"><span className="f-w-600">Price</span></div>
+                                                <label className="d-block" htmlFor="edo-ani">
+                                                    <input className="radio_animated" id="edo-ani" type="radio" name="rdo-ani" defaultChecked="" />
+                                                    All Courses
+                                                </label>
+                                                <label className="d-block" htmlFor="edo-ani1">
+                                                    <input className="radio_animated" id="edo-ani1" type="radio" name="rdo-ani" defaultChecked="" />
+                                                    Paid Courses
+                                                    </label>
+                                                <label className="d-block" htmlFor="edo-ani2">
+                                                    <input className="radio_animated" id="edo-ani2" type="radio" name="rdo-ani" defaultChecked="" />
+                                                    Free Courses
+                                                </label>
+                                            </div> */}
+                                            
                                             <button className="btn btn-primary text-center" type="button">Filter</button>
                                         </div>
                                     </div>
                                 </Collapse>
                             </div>
                         </div>
-                        <div className="col-xl-12">
+                        {/* <div className="col-xl-12">
                             <div className="card">
                                 <div className="card-header">
                                     <h5 className="mb-0">
@@ -127,8 +135,8 @@ const LearningFilter = () => {
                                     </div>
                                 </Collapse>
                             </div>
-                        </div>
-                        <div className="col-xl-12">
+                        </div> */}
+                        {/* <div className="col-xl-12">
                             <div className="card">
                                 <div className="card-header">
                                     <h5 className="mb-0">
@@ -160,7 +168,7 @@ const LearningFilter = () => {
                                     </div>
                                 </Collapse>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

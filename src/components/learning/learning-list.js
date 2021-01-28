@@ -1,10 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Breadcrumb from '../common/breadcrumb';
 import LearningFilter from './learning-filter';
 import learningDB from '../../data/learning/learningDB';
 
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
 
 const LearningList = (props) => {
+
+
+    const [dropdownOpen, setOpen] = useState(false);
+
+    const toggle = () => setOpen(!dropdownOpen);
     const clickApply = (course) => {
         const id = course.Id
         props.history.push(`${process.env.PUBLIC_URL}/learning/learning-detail`, { id });
@@ -14,12 +21,38 @@ const LearningList = (props) => {
         <Fragment>
             <Breadcrumb title="Learning List" parent="Learning" />
             <div className="container-fluid">
+            <LearningFilter />
+                {/* <div className="row">
+                    <div className="col-xl-12 card">
+                        <div className="card-body">
+                        <div className="email-top">
+                                            <div className="row">
+                                                <div className="col-md-1">
+                                                    <h5>Filter :</h5>
+                                                </div>
+                                                <div className="col text-left">
+                                                    <div className="dropdown">
+                                                        <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                                                            <DropdownToggle className="dropbtn" color="primary" caret> More </DropdownToggle>
+                                                            <DropdownMenu>
+                                                                <DropdownItem>Draft</DropdownItem>
+                                                                <DropdownItem >Trash</DropdownItem>
+                                                                <DropdownItem >Spam</DropdownItem>
+                                                            </DropdownMenu>
+                                                        </Dropdown>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                </div> */}
                 <div className="row">
-                    <div className="col-xl-9 xl-60">
+                    <div className="col-xl-12 xl-60">
                         <div className="row">
                             {learningDB.map((data, i) => {
                                 return (
-                                    <div className="col-xl-4 xl-50 col-sm-6" key={i}>
+                                    <div className="col-xl-3 xl-50 col-sm-6" key={i}>
                                         <div className="card">
                                             <div className="blog-box blog-grid text-center product-box">
                                                 <div className="product-img">
@@ -47,7 +80,6 @@ const LearningList = (props) => {
                             })}
                         </div>
                     </div>
-                    <LearningFilter />
                 </div>
             </div>
         </Fragment>
