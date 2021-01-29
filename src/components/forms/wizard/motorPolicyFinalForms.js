@@ -5,7 +5,18 @@ import '../../../assets/css/custom-form.css'
 const MotorPolicyFinalForms = () => {
     return (
         <React.Fragment>
-            <div className="row m-t-45" id="finalForm">
+            <div className="row">
+                  <div className="u-pearl current col-4">
+                    <div className="u-pearl-icon"><i className="icon-shopping-cart" aria-hidden="true"></i></div><span className="u-pearl-title">Account Info</span>
+                  </div>
+                  <div className="u-pearl  col-4">
+                    <div className="u-pearl-icon"><i className="icon-write" aria-hidden="true"></i></div><span className="u-pearl-title">Billing Info</span>
+                  </div>
+                  <div className="u-pearl col-4">
+                    <div className="u-pearl-icon"><i className="icon-check" aria-hidden="false"></i></div><span className="u-pearl-title">Confirmation</span>
+                  </div>
+                </div>
+            <div className="row" id="finalForm">
                 <div className="col-md-7">
                     <div className="package-grid-block">
                         <Formik initialValues={{}}

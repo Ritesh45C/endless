@@ -103,7 +103,7 @@ const LearningDeatil = (props) => {
                             </section>
                         </div>
                     </div>
-                    <LearningFilter />
+                    {/* <LearningFilter /> */}
                 </div>
             </div>
         </Fragment>

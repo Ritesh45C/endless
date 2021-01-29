@@ -7,13 +7,24 @@ const ReviewQuotation = (props) => {
 
     return (
         <React.Fragment>
+            <div className="row">
+                  <div className="u-pearl current col-4">
+                    <div className="u-pearl-icon"><i className="icon-shopping-cart" aria-hidden="true"></i></div><span className="u-pearl-title">Account Info</span>
+                  </div>
+                  <div className="u-pearl  col-4">
+                    <div className="u-pearl-icon"><i className="icon-write" aria-hidden="true"></i></div><span className="u-pearl-title">Billing Info</span>
+                  </div>
+                  <div className="u-pearl col-4">
+                    <div className="u-pearl-icon"><i className="icon-check" aria-hidden="false"></i></div><span className="u-pearl-title">Confirmation</span>
+                  </div>
+                </div>
             <section className="mt50 reviewQuotation">
 
                 <h4 className="text-center m-b-25">
                     Review Quotation
                 </h4>
 
-                <div className="row mt50">
+                <div className="row ">
                     <div className="col-xl-6">
                         <div className="height-equal package-grid-item card">
                             <div className="card-header card-header-border">
